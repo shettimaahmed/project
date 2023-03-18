@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.banner{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/plastic.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	width: 120px;
+	cursor: pointer;
+	color: white;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: orange;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+
+}
+
+.content{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+}
+.content h1{
+	font-size: 70px;
+	margin-top: 80px;
+}
+
+.content p{
+	margin: 20px auto;
+	font-weight: 100px;
+	line-height: 25px;
+} 
+
+button{
+	width: 200px;
+	padding: 15px;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid orange;
+	background: transparent;
+	color: #fff;cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+}
+
+
+span{
+	background: orange;
+	height: 100%;
+	width: 0%;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 03s; 
+
+}
+
+
+button:hover span{
+	width: 100%;
+
+}
+
+button:hover{
+	border: none;
+}
+
+.about-sec .logo {
+	font-size: 1.5em;
+	color: #ffffff;
+}
+.about-sec  .social-icon ul {
+	display: flex;
+	flex-direction: row;
+
+}
+.social-icon ul li {
+	list-style-type: none;
+	margin: 0 5px;
+}
+.social-icon a img {
+	width: 20px;
+	height: 20px;
+}
+.hero {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.hero section {
+	padding: 0 3.5em;
+}
+.hero img {
+	max-height: 100vh;
+	width: 30%;
+	padding-right: 30px;
+}
+.container {
+	padding: 3.3em;
+}
+.services-con , .work-con{
+	background: #f1f1f1;
+}
+.services-con > h2, work-con > h2, .service > h3 , .hero > section > h1 {
+	margin-bottom: 0.5em;
+}
+.services, .works {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 3em 0;
+}
+.services .service, .works .work {
+	flex: 30%;
+	text-align: center;
+	padding: 2em 1.5em;
+
+}
+.services .service:hover {
+	box-shadow: 0 10px 30px rgba(223, 14, 84, 0.972) ;
+	background: orange;
+	
+}
+.service img {
+	max-width: 100px;
+}
+.works img {
+	width: 300px;
+	height: 300px;
+}
+.info{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap:wrap ;
+}
+.info section {
+	flex: 30%;
+	padding: 1.5em 2em;
+}
+.info .copy {
+	text-align: center;
+	background: orange;
+	color: black;
+}
+.call {
+	text-decoration: none;
+	color:orange ;
+}
+.info .social-icon ul {
+	display: flex;
+	
+}
+@media screen and (max-width: 700px) {
+	.hero {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+	}
+	.hero img {
+		display: none;
+	}
+	.services .service, .works .work {
+		flex: 100%;
+	}
+	.lands {
+		
+		display: none;
+	}
+
+}
